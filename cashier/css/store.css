@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #f9f9f9;
+  --sidebar: #1e1e1e;
+  --accent: #d9b99f;
+  --text: #333;
+  --card: #fff;
+  --border: #ddd;
+  --hover: #f3f1ec;
+  --edit: #007bff;
+  --delete: #e53935;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  height: 100vh;
+}
+
+.dashboard {
+  display: flex;
+  width: 100%;
+}
+/* LOGO IMAGE STYLE */
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo-img {
+  width: 60px; /* Adjust size here */
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+}
+/* SIDEBAR */
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: #4e342e; /* mocha brown */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar .logo {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  font-size: 1.7rem;
+  color: #f2d0a9; /* light coffee tone */
+  margin: 0;
+}
+
+.sidebar nav {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.sidebar nav a {
+  color: #e0c9a6;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: #6d4c41;
+  color: #fff;
+  padding-left: 18px;
+}
+
+.user-info {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.user-info img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-info p {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.logout {
+  background: #795548;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background: #a1887f;
+}
+
+
+/* MAIN CONTENT */
+.content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 30px 40px;
+  background: #fffaf6;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.add-btn {
+  background: var(--accent);
+  border: none;
+  color: #222;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #c8a784;
+}
+
+/* TOOLBAR */
+.toolbar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.toolbar input,
+.toolbar select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+}
+
+.table-container {
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--accent);
+  color: #222;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+}
+
+td img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+td a {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+td a.edit {
+  background: var(--edit);
+  color: #fff;
+}
+
+td a.delete {
+  background: var(--delete);
+  color: #fff;
+}
+
+td a.edit:hover {
+  background: #0063cc;
+}
+
+td a.delete:hover {
+  background: #c62828;
+}
+
+/* STOCK STATUS */
+.low-stock {
+  background: #ffe6e6;
+  color: #d32f2f;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+tr:hover {
+  background: var(--hover);
+  transition: 0.2s;
+}
+
+@media (max-width: 900px) {
+  .toolbar {
+    flex-direction: column;
+  }
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

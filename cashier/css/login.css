@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  background: #f7f3ef;
+}
+
+.login-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* LEFT SIDE IMAGE */
+.image-side {
+  flex: 1;
+  background: url('../images/cnpbg.jpg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.overlay {
+  background: rgba(59, 45, 32, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 60px 40px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 100%;
+}
+
+.overlay h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* RIGHT SIDE FORM (now light khaki background) */
+.form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #cbb994, #d8c3a5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add floating background lights */
+.form-side::before, .form-side::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 215, 160, 0.25);
+  border-radius: 50%;
+  filter: blur(90px);
+  animation: floatGlow 8s infinite ease-in-out alternate;
+}
+
+.form-side::before {
+  top: 10%;
+  left: 10%;
+}
+
+.form-side::after {
+  bottom: 15%;
+  right: 10%;
+}
+
+@keyframes floatGlow {
+  0% { transform: translateY(0px); opacity: 0.6; }
+  100% { transform: translateY(30px); opacity: 0.9; }
+}
+
+/* FORM BOX (now dark brown tone) */
+.form-box {
+  position: relative;
+  width: 400px;
+  padding: 50px;
+  background: rgba(60, 42, 28, 0.95); /* dark brown */
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transform: translateY(0);
+  animation: floatBox 6s ease-in-out infinite alternate;
+  transition: all 0.4s ease;
+  color: #f9f3e7;
+}
+
+/* Floating animation for the box */
+@keyframes floatBox {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Hover glow */
+.form-box:hover {
+  box-shadow: 0 0 25px rgba(139, 90, 43, 0.6), 0 8px 25px rgba(0,0,0,0.3);
+  transform: scale(1.02);
+}
+
+/* Back button */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #f9f3e7;
+  font-size: 28px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: #e8cfae;
+  transform: translateX(-3px);
+}
+
+/* Logo */
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  color: #f9f3e7;
+  margin-top: 8px;
+}
+
+h3 {
+  color: #f9f3e7;
+  margin: 15px 0 5px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #e8cfae;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  font-weight: 500;
+  color: #f9f3e7;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 5px;
+  border: 1px solid #a68c69;
+  border-radius: 8px;
+  background: #fffaf0;
+  font-size: 14px;
+  color: #3b2d20;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #e8cfae;
+  box-shadow: 0 0 8px rgba(255, 215, 160, 0.4);
+}
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #f9f3e7;
+}
+
+.remember a {
+  color: #e8cfae;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.remember a:hover {
+  text-decoration: underline;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: #d9b38c;
+  color: #3b2d20;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn-login:hover {
+  background-color: #e3c79a;
+  box-shadow: 0 0 15px rgba(255, 215, 160, 0.5);
+  transform: scale(1.03);
+}
+
+footer {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #e8cfae;
+}

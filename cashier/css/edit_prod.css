@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f6f7fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page container */
+.content {
+  max-width: 800px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Header */
+h2 {
+  font-size: 1.9em;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+/* Error and message boxes */
+.alert {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.alert.error {
+  background: #fde8e8;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+}
+
+.alert.success {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #14532d;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.95em;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9fafb;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Image preview section */
+.image-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.image-preview img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.image-preview label {
+  cursor: pointer;
+  color: #007bff;
+  font-weight: 500;
+  background: #f0f8ff;
+  border: 1px solid #007bff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.image-preview label:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Button group */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+button,
+a[href*="dashboard_manager"] {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+button {
+  background: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+a[href*="dashboard_manager"] {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+a[href*="dashboard_manager"]:hover {
+  background: #d1d5db;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
